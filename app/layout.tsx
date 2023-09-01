@@ -1,11 +1,15 @@
 import './globals.css';
+
 import type { Metadata } from 'next';
 import { Nunito } from 'next/font/google';
 import ClientOnly from './components/ClientOnly';
 import Navbar from './components/navbar/Navbar';
 import ToasterProvider from './providers/ToasterProvider';
+
 import RegisterModal from './components/modals/RegisterModal';
 import LoginModal from './components/modals/LoginModal';
+import RentModal from './components/modals/RentModal';
+
 import getCurrentUser from './actions/getCurrentUser';
 
 export const metadata: Metadata = {
@@ -27,6 +31,7 @@ export default async function RootLayout({
 					<ToasterProvider />
 					<LoginModal />
 					<RegisterModal />
+					<RentModal />
 					<Navbar currentUser={currentUser} />
 				</ClientOnly>
 				{children}

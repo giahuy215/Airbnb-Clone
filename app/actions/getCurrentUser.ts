@@ -27,9 +27,9 @@ export default async function getCurrentUser() {
 
 		return {
 			...currentUser,
-			createAt: currentUser.createAt.toISOString(),
-			updateAt: currentUser.updateAt.toISOString(),
-			emailVerifield: currentUser.emailVerified?.toISOString() || null,
+			createdAt: currentUser.createdAt.toISOString(),
+			updatedAt: currentUser.updatedAt.toISOString(),
+			emailVerified: currentUser.emailVerified?.toISOString() || null,
 		};
 	} catch (error: any) {
 		return null;
